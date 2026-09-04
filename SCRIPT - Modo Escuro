@@ -1,0 +1,6 @@
+(() => {
+  document.body.style.filter = 'invert(1) hue-rotate(180deg)';
+  [...document.querySelectorAll('img, video, picture')].forEach(el => {
+    el.style.filter = 'invert(1) hue-rotate(180deg)';
+  });
+})();
