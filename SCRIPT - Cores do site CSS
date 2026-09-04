@@ -1,0 +1,10 @@
+(() => {
+  const colors = new Set();
+  document.querySelectorAll('*').forEach(el => {
+    const style = getComputedStyle(el);
+    if (style.backgroundColor !== 'rgba(0, 0, 0, 0)') colors.add(style.backgroundColor);
+    colors.add(style.color);
+  });
+  console.log(`🎨 ${colors.size} cores únicas encontradas:`);
+  console.table([...colors]);
+})();
